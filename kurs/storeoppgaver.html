@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Python 2</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+
+    </head>
+    <body>
+        
+        <div id="container">
+            <div class="header">
+                <span class="headertext">Python Basics: Variabler og Expressions</span>
+                <span class="text">I dette kurset skal vi leke oss og bli gode med Python. Planen er å utvikle oss videre fra det vi gikk igjennom på høsten
+                    og lære mye kult man kan gjøre med Python. Vi begynner med å lære oss variabler godt.
+                </span>
+            </div>
+            <div class="section">
+                <span class="paragraph-header">Lage en mappe hvor filer lagres</span>
+                <ol class = "nummerliste">
+                    <li>Lag en ny mappe i Basic-mappen i OneDrive som heter <b>Python2</b></li>
+                    <li>Åpne mappen i Visual Studio Code: Trykk på File -> Open Folder -> Finn mappen Python2 -> Trykk på Open Folder</li>
+                </ol> 
+            </div>
+            <div class="section">
+                <span class="paragraph-header">Variabler</span>
+                <span class = "text">Faste verdier, slik som tall, bokstaver og strenger kalles "konstanter", fordi verdiene deres ikke endres. I bildet nedenfor
+                        brukes <code>print()</code> til å skrive tallet ut til terminalen.
+                </span>
+                <img class="kode" src="../img/konstanter.png">
+                <span class="text">I Python kan vi lagre data og verdier for å senere kunne bruke dem og endre dem. Dette kaller vi variabler. 
+                I eksemplet nedenfor har vi en variabel som vi har kalt <code>tall2</code>, som har en verdi 15. Navnet til variabelen, 
+                som står på venstre siden av likhetstegnet, er valgfritt. Man kan senere endre på variabelverdien. Det er derfor vi kaller det en variabel. 
+                </span>
+                <img class="kode" src="../img/variabler.png">
+                <span class="text">
+                I eksemplet ovenfor gjør vi multiplisering. Man kan gjøre de fleste matematiske operasjoner i Python
+                på akkurat samme måte som i vanlig matte. 
+                </span>
+                <img class = "operatorer" src="../img/operatorer.png">
+                <span class="text">
+                Prøv deg frem i det interaktive Python-vinduet nedenfor. 
+                Husk at man må bruke <code>print()</code> for å skrive ut til konsollen på høyreside av Python-vinduet.
+                </span>
+                <iframe src="https://trinket.io/embed/python3/8dfcef9a13" width="100%" height="300" 
+                frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                
+            </div>
+            <div class = "section">
+                <span class="paragraph-header">Typer data</span>
+                <span class="text">Det finnes mange forskjellige typer data. De mest kjente er 
+                </span>
+                <ul class="unummerliste">
+                    <li>Heltall (<b>integer</b>).<span style="color:rgb(17, 255, 0)">Eksempel: 10</span></li>
+                    <li>Desimaltall (<b>float</b>). <span style="color:rgb(17, 255, 0)">Eksempel: 10.5</span></li>
+                    <li>Tekst-streng (<b>string</b>). <span style="color:rgb(17, 255, 0)">Eksempel: "Hello World"</span></li>
+                    <li>Boolean (noe som er <b>true</b> eller <b>false</b>). <span style="color:rgb(17, 255, 0)">Eksempel: False</span></li>
+                </ul>
+                <span class="text">
+                    Python er smart, og klarer å gjenkjenne hva slags type data vi jobber med. Vi kan 
+                    se hvordan det fungerer i bildet nedenfor. Når to tall plusses sammen så får vi 
+                    summen. Når to strenger plusser sammen, så legges de sammen i en streng. Dette fungerer
+                    så lenge det er to verdier av <i>samme type</i> som legges sammen. 
+                </span>
+                <img class="kode" src="../img/types.png">
+                <span style="color:rgb(17, 255, 0)">Liten oppgave:</span> <span class="text">Prøv å legg sammen data av type streng
+                sammen med data av typen tall i Python: Hva skjer? Hvorfor tror du det er slikt?</span>
+                </span>
+                <br>
+                <button id ="solutionbutton" onclick="showSolution()">Løsning</button>
+                <div id = "solution">
+                    <span class="solution-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio. Doloribus commodi vel veritatis harum ea quas eveniet, fugit ex maxime veniam ducimus minus, pariatur, autem nesciunt. Enim, dignissimos quidem?
+                    </span>
+                </div>
+                <br><br>
+                <span class="text">
+                    Du kan konvertere mellom noen av datatypene. Hvis du har lyst til at heltallet (<b>int</b>)
+                    ditt skal istedet være et desimaltall (<b>float</b>), eller vil gjøre en streng som inneholder
+                    tall til et rent tall, så kan du også det:
+                </span>
+                <br><br>
+                <img src="../img/strengkonv.png" style="height: 135px">
+            </div>
+            <div class = "section">
+                <span class="paragraph-header">Input</span>
+                <span class="text">
+                    Input er en innebygd funksjon i Python som printer ut en valgfritt
+                    melding, slik som "Hvem er du" i eksemplet nedenfor. Deretter venter den 
+                    på at brukeren skal skrive noe i terminalen. Det navnet brukeren skriver 
+                    blir lagra som en variabel med variabelnavnet <code>navn</code>.
+                    <br>
+                    <code style="color: yellow">navn = input("Hvem er du? ")</code><br>
+                    Når man bruker input, så får man alltid ut en string. Hvis vi vil
+                    lese inn et tall fra en bruker, så må vi konvertere stringen til et 
+                    nummer
+                    <br><code style="color: yellow">nummer = input("Hvem er du? ")</code><br>
+                    <code style="color: yellow">nummer = int(nummer)</code><br>
+                </span>
+            </div>
+            <div class="section">
+                <span class="paragraph-header">Kommentering i Python</span>
+                <span class="text">
+                    Alt etter en # blir ignorert i Python. Det kaller vi en kommentar. Det er mange gode grunner
+                    til å kommentere ting i Python.
+                </span> 
+                <ul class="unummerliste">
+                    <li>Forklare hva en sekvens av koden gjør</li>
+                    <li>Dokumentere hvem som har skrevet en spesifikk del av en kode (for samarbeid)</li>
+                    <li>For å "skru av" en spesifikk del av koden din, ofte brukt når man har en error i 
+                        koden man ikke greier å finne umiddelbart (bugfixing)</li>
+                </ul>
+                <img src="../img/eksempel.png" style = "width:40vw">
+                
+
+            </div>
+            <div class="section">
+                <span class="paragraph-header">Oppgaver</span>
+                <span class = "text">Generelt når det gjelder oppgavene, så skal det du gjør og det 
+                sekvenser av koden gjør kommenteres med #.
+                <br>
+
+                </span>
+
+                <span class = "task-header">Oppgave 1.1</span>
+                <span class = "text">
+                    Lag en variabel som inneholder strengen «Hello World!» og skriv den ut til konsollen. 
+                </span>
+
+                <span class = "task-header">Oppgave 1.2</span>
+                <span class = "text">
+                    Lag to variabler og legg sammen to verdier. Skriv passende tekst sammen med utskriften av svaret.
+                </span>
+                <span class = "task-header">Oppgave 1.3</span>
+                <span class = "text">
+                    Gang sammen to tall. Bruk så mange variabler som du tenker kan være lurt, og skriv i kommentarer i koden hvorfor du har gjort det.                </span>
+                
+                <span class = "task-header">Oppgave 1.4</span>
+                <span class = "text">
+                    Hent inn en streng fra brukeren som du skriver ut tre ganger.
+                </span>
+
+                <span class = "task-header">Oppgave 1.5</span>
+                <span class = "text">
+                    Hent inn tre temperaturer fra brukeren og finn gjennomsnittet av de. 
+                    Skriv ut passende tekst og resultat i konsollen. Bruk escape-tegn.                
+                </span>
+                
+                <span class = "task-header">Oppgave 1.6</span>
+                <span class = "text">
+                    Hent inn hvor mye brukeren har i timelønn, og hvor mange timer brukeren har jobbet. Lag begge disse variablene på samme linje. Finn bruttolønnen (lønn før skatt). Hent etterpå inn hvor mye brukeren skatter i prosent. 
+                    Skriv ut passende informasjon til brukeren, med forklarende tekst.                
+                </span>
+
+                <span class = "task-header">Oppgave 1.7</span>
+                <span class = "text">
+                    Lag en enkel kalkulator som tar inn tall fra brukeren og som legger de sammen. Skriv kommentarer i koden din. La så brukeren bestemme selv om de vil legge til enda et tall, eller ikke. 
+                    Skriv ut fornuftige ting i konsollen, og bruk den korteste skrivemåten du får til.
+                </span>
+
+                <span class = "task-header">Oppgave 1.8</span>
+                <span class = "text">
+                    Lag et program som spør brukeren om forskjellige datatyper, og som gjør om til den datatypen som blir spurt om. 
+                    Skriv ut hva brukeren skrev.                
+                </span>
+                <span class = "task-header">Oppgave 1.8</span>
+                <span class = "text">
+                    Lag en fleksibel kalkulator som kan regne mange forskjellige regnearter, og kan skrive tall ut på vitenskapelig notasjon dersom brukeren ønsker det. 
+                    Bruk funksjoner dersom du kan det fra før av (funksjoner er et tema som kommer senere, dersom du ikke kan det). 
+                    Brukeren skal i starten av programmet kunne angi hvor mange siffer de ønsker etter komma, og kalkulatoren skal tilpasse seg. Bruk escape-tegn i utskriftene til brukeren..                
+                </span>
+                
+         
+                <span class = "task-header">Oppgave 2</span>
+                <span class="text">
+                    Lag et program som spør brukeren om lengden på en sidekant, også regner programmet 
+                    ut arealet av kvadratet. Utvid programmet slik at det spør brukeren om en høyde, også
+                    regner programmet ut volumet av grunnflaten tidligere med en høyde (kube).
+                </span>
+                <span class = "task-header">Oppgave 3</span>
+                <span class = "text">
+                    Lag et program som spør brukeren om en temperatur i Celsius, og som 
+                    konverterer temperaturen til Fahrenheit, og printer ut den konverterte
+                    temperaturen.                    
+                </span>
+
+
+            </div>
+        </div>
+
+    <script src="../index.js">
+        
+    </script>
+    </body>
+</html>

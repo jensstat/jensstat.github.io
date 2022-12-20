@@ -1,0 +1,131 @@
+body {
+    background-color: #393737;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;    
+}
+
+
+
+#container {
+    width:60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#container div {
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headertext {
+    color: rgb(153, 168, 22);
+    font-size: 36px; font-style: normal; 
+    font-variant: normal; font-weight: 700; 
+    margin-bottom: 10px;
+}
+
+.text {
+    color: white;
+    font-size: 18px; 
+    font-style: normal; 
+    font-variant: normal;
+    line-height: 1.6em;
+    text-align: left;
+}
+
+.paragraph-header {
+    color: orange;
+    font-size: 30px; font-style: normal; 
+    font-variant: normal; font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.task-header {
+    color: greenyellow;
+    font-size: 20px; font-style: normal; 
+    font-variant: normal; font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.nummerliste li{
+    color: white;
+    font-size: 18px; 
+    font-style: normal; 
+    font-variant: normal;
+    line-height: 1.6em;
+    text-align: left;
+}
+
+
+.unummerliste li {
+    list-style: none; /* Remove default bullets */
+    color: white;
+    font-size: 18px; 
+    font-style: normal; 
+    font-variant: normal;
+    line-height: 1.6em;
+    text-align: left;
+  }
+
+a {
+    color: yellowgreen;
+}
+
+.unummerliste  li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: white; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.section{
+    display: inline-block;
+    
+}
+
+.section .kode, .operatorer{
+    display: block;
+    height: 100px;
+
+    margin: 25px 0px;
+    border:2px solid black;
+}
+
+.operatorer {
+    height:14vw;
+}
+
+
+#solution {
+    display:none;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.solution-text {
+    color: black;
+}
+
+code {
+    color: yellowgreen;
+}
+

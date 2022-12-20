@@ -1,0 +1,204 @@
+$backgroundcolor: hsl(0, 0%, 90%);
+$headertitlecolor: #2e3047;
+$headertextcolor: black;
+$sectiontitlecolor: #2e3047;
+$sectiontextcolor: black;
+
+
+body {
+    background-color: $backgroundcolor;
+    overflow: hidden;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*CONTENT CSS-STYLING*/
+.content {
+    flex: 1 1 0;
+    padding: 2rem;
+    overflow-y: auto;
+  
+  .inner {
+    max-width: 65vw;
+  }
+
+  header .headertitle {
+    display: block;
+    color: $headertitlecolor;
+    font-size: 2.5rem;
+    margin-top: 0.67em;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .headertext {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: $headertextcolor;
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  
+  .paragraph-header {
+    color: $sectiontitlecolor;
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .project-header {
+    @extend .paragraph-header;
+  
+}
+
+  .text {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: $sectiontextcolor;
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+  
+  .definition {
+    @extend .text;
+    background-color: #2e3047;
+    color: #FFF;
+    padding: 10px; 
+    border: 2px solid black;
+    border-radius: 10px;
+    
+  }
+  .nummerliste, .unummerliste {
+    color: $sectiontextcolor;
+    font-size: 1.25em;
+    font-style: normal;
+    text-align: left;
+    margin-left:2rem;
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
+  .nummerliste li, .unummerliste li{
+    list-style-position: outside;
+  }
+
+
+  .nummerliste li:not(:last-child), .unummerliste li:not(:last-child){
+    margin-bottom: 5px;
+  }
+
+  
+  img {
+    height: auto;
+    width: auto;
+    max-width: 600px;
+    max-height: 600px;
+    border: 2px solid #2e3047;
+  }
+  .operatorer {
+    width: 300px;
+  }
+
+  .newfoto{
+    height: 70%;
+    width: 70%;
+    max-height: 70vh;
+    max-width: 70vw;
+    border: 2px solid #2e3047;
+  }
+  .twopictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .twopictures img{
+    height: 280px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}  
+  
+  #solutionbutton {
+    background-color: #2e3047;
+    color: white;
+    font-size: 0.75em;
+    border: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2px;
+    min-height: 30px;
+    min-width: 120px;
+    border: 2px solid #2e3047;
+    border-radius: 8px;
+  }
+  
+  #solution {
+    display: none;
+    background-color: #2e3047;
+    border: 2px solid #2e3047;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .solution-text {
+    color: white;
+  }
+  
+  code {
+    background-color: rgb(156, 206, 156);
+    font-size: 1.1em;
+    padding: 2.5px;
+  }
+ 
+  .content .task-header {
+    color: var(--sectiontitlecolor);
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+ 
+  @media (max-width: 1024px) {
+    .sidebar {
+      max-width: 200px;
+    }
+    .content {
+      max-width: 100vw;
+    }
+    .content .twopictures img {
+      width: 250px;
+      height: 250px;
+    }
+
+  
+  }
+  @media (max-width: 768px) {
+    .content {
+      padding-top: 8rem;
+      max-width: 100vw;
+    }
+    .inner {
+      max-width: initial !important;
+      width: auto;
+    }
+    .sidebar.is-active {
+      left: 0;
+    }
+    img {
+      width: 50%;
+    }
+    .content .twopictures {
+      flex-direction: column;
+    }
+
+    .content .twopictures img {
+      margin-top: 5px;
+      width: 300px;
+      height: 300px;
+    }
+  }

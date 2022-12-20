@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Python | Betingelser</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/sidebar.css">
+        <link rel="stylesheet" href="../styles/content.css">
+        <link rel="stylesheet" href="../styles/highlight/styles/github-dark-dimmed.min.css">
+    </head>
+    <body>
+        <div id="container">
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <span class="menutitle">Navigasjon</span>  
+                <nav class="menu">
+                    <ul>
+                        <li><a href="variablerside.html" class="menu-item">Variabler</a></li>
+                        <li><a href="conditionsside.html" class="menu-item is-active">Conditions</a>
+                            <ul>
+                                <li><a href="#if-setninger" class="menu-item-sub">If-setninger</a></li>
+                                <li><a href="#logiskeoperatorer" class="menu-item-sub">Logiske operatorer</a></li>
+                                <li><a href="#innrykk" class="menu-item-sub">Innrykk</a></li>
+                                <li><a href="#else" class="menu-item-sub">Else</a></li>
+                                <li><a href="#elif" class="menu-item-sub">Elif</a></li>
+                                <li><a href="#oppsummering" class="menu-item-sub">Oppsummering</a></li>
+                                <li><a href="#oppgaver" class="menu-item-sub">Oppgaver</a></li>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="funksjoner.html" class="menu-item">Funksjoner</a>
+                    <a href="prosjekter.html" class="menu-item">Større oppgaver/prosjekter</a>
+                </nav>
+
+            </aside>
+            <main class="content">
+                <div class="inner">
+                    <header> 
+                        <span class="headertitle" id="headertitle">Python Basics: IF/ELSE betingelser</span>
+                        <span class="headertext">Nå skal vi møte og bruke IF-setninger, som gir oss en måte hvor Python kan ta avgjørelser
+                            for oss.  
+                        </span>
+                    </header>
+                    <section id="if-setninger">
+                        <span class="paragraph-header">If-setninger</span>
+                        <span class="text">
+                        Et eksempel på hvordan Python kan hjelpe oss å ta avgjørelser er vist nedenfor</span>
+<pre><code class="language-python">x=2
+if x < 3:
+    print(f"{x} er mindre enn 3")
+if x > 5: 
+    print(f"{x} er større enn 5")
+</code></pre>
+                        <span class="text">
+                            Først blir variabelen x tilordna verdien 2. Deretter følger en if-setning, som tester om x er mindre enn 3. Dersom
+                            x er mindre enn 3, skrives meldingen "2 er mindre enn 3" til konsollen. 
+                            Deretter tester programmet om x er større enn 5. Siden dette ikke er tilfellet, så skrives ikke noen melding ut.
+                            <br><br>
+                            Merk deg måten vi har skrevet strengene i print-funksjonen. Når vi skriver <code>print(f"{x} er mindre enn 3")</code>
+                            i print-funksjonen, så bruker vi noe som heter en <b>f-string</b>. En f-string har en f i begynnelsen, og krøllete parenteser
+                            som inneholder variabler som vil byttes ut med verdiene til variabelen. Dette er altså en god måte å lage strenger som inneholder
+                            variabler
+                             
+                            
+
+                        </span>
+                        <img src="../img/flytskjema.png" class="operatorer">
+                        <span class="text">Koden til et if-uttrykk blir bare kjørt dersom resultatet av spørsmålet som blir stilt er sant (<b>True</b>). Dersom
+                            resultatet av spørsmålet ikke er sant (<b>False</b>), så blir linjen hoppet over.
+                            I hvilke tilfeller vil ifølge flytdiagrammet ovenfor linjen "Større" blir printet av programmet?</span>
+                    </section>
+                    <section id="logiskeoperatorer">
+                        <span class="paragraph-header">Logiske operatorer</span>
+                        <span class="text">Vi kan gjøre mer enn bare å sjekke om et tall er mindre eller større enn 
+                            et annet. Listen nedenfor viser de ulike <em>logiske operatorene</em> man kan teste. 
+                        </span>
+                        <img src="../img/linop.png" class="operatorer">
+                        <span class="text">Det finnes i tillegg tre logiske operatorer som er gitt nedenfor, med et eksempel. 
+                        </span>
+                        <ul class="unummerliste">
+                            <li><b>and:</b> <code>x > 0 and x < 10</code> gir True, dersom x er større enn null <b>og</b> mindre enn 10. </li>
+                            <li><b>or:</b> <code>x > 0 or x < 10</code> gir True, dersom x er <b>enten</b> større enn null <b>eller</b> mindre enn 10 </li>
+                            <li><b>not:</b> <code>not x < 10</code> gir True, dersom x <b>ikke</b> er mindre enn 10</li>
+                        </ul>
+
+                        <span class="text">Du kan på denne måten spesifisere ganske klart til Python hvordan du vil at valg skal tas. Prøv deg frem i det interaktive Python-vinduet nedenfor. 
+                            Få Python til å printe en melding, slik at den bare printer meldingen når noen begrensninger er oppfylt med de logiske operatorene. 
+                        </span>
+                        
+                        <iframe src="https://trinket.io/embed/python3/187f8021de" width="100%" height="356" 
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    </section>    
+                    <section id="innrykk">
+                    <span class="paragraph-header">Innrykk</span>
+                    <span class="text">Innrykk spiller en viktig rolle i Python. Hver gang du skriver if-setninger, så må 
+                        du innrykke koden som skal skje dersom if-setningen gir True resultat. Reduser innrykket for å avslutte if-blokken.
+                        I bildet nedenfor kan du se at vi har en if-setning inni en annen if-setning.</span>
+<pre><code class="language-python">x=20
+if x > 10:
+    print(f"{x} er større enn 10")
+    if x < 30: 
+        print(f"{x} er mellom 10 og 30")</code></pre>                        
+                    </section>   
+                    <section id="else">
+                        <span class="paragraph-header">Else:</span>
+                        <span class="text">
+                            Noen ganger ønsker vi at Python skal kjøre en blokk kode dersom et logisk uttrykk 
+                            er True, og en annen type kode dersom det logiske uttrykket er False. En analogi er når man går på en sti, Dette er tilfellet når man må velge
+                            en vei: som når man går på en sti og stien splittes i to retninger, høyre og venstre.
+                            Valgets krav styrer vi med kodeordene <code>if/else</code>. 
+                        </span>
+<pre><code class="language-python">x=20
+if x > 10:
+    print(f"{x} er større enn 10")
+else: 
+    print(f"{x} er 10 eller lavere")</code></pre>   
+                        <span class="text">Her tildeles variabelen x verdien 20. Deretter sjekkes det om x er større enn 10. Dersom resultatet
+                            av dette spørsmålet er True, så skrives meldingen "Høyere" til konsollen. Dersom resultatet er False, så printes "Lavere". </span>
+                    </section>
+                    <section id="elif">
+                        <span class="paragraph-header">Elif:</span>
+<pre><code class="language-python">x=20
+if x < 5:
+    print("Small")
+elif x < 10:
+    print("Medium")
+else:
+    print("Large")</code></pre>
+                               <span class="text">Elif brukes dersom man skal teste for flere forhold. I koden 
+                            over så sjekkes først om x er mindre enn 5. Hvis resultatet på denne testen gir True, så printes "Small", også avsluttes koden.
+                            Dersom resultatet er False, så går vi videre til <code>elif x<10</code>. Hvis denne testen gir True, så printes "Medium", også avsluttes
+                            koden. Dersom resultatet av denne testen også er False, så vil det som står under else skje, og "Large" skrives til konsollen.
+                            Du kan ha mange elifs! Det er da viktig at du har satt de opp riktig, slik at prioriteringene er riktig. 
+                        </span>
+                    </section>
+                    <section id="oppsummering">
+                        <span class="paragraph-header">Oppsummering:</span>
+                        <figure>
+                            <img src="../img/flowchart.png">
+                            <figcaption>Bildet er hentet fra <a href="https://www.tutlane.com/tutorial/python/python-elif-statement"> Tutlane</a></figcaption>
+                        </figure>
+                        <span class="text">
+                            For å oppsummere, så kan Python gjøre avgjørelser for oss når det gjelder spørsmål som enten er True eller False.
+                            </span>
+                            <ol class="nummerliste">
+                                <li>Sjekker if-setningen: Dersom resultatet er True så kjøres if-blokken og testingen stoppes.</li>
+                                <li>Dersom resultatet gir False, går programmet til første elif-setning. Dersom det gir True så kjøres elif-blokken og testingen stoppes. </li>
+                                <li>Gjør steg 2 til alle elif-blokker er sjekket.</li>
+                                <li>Dersom alle testene returnerer False, så kjøres else-blokken og testingen stoppes.</li>
+                            </ol>
+                    </section>
+                    <section id="oppgaver">
+                        <span class="paragraph-header">Oppgaver</span>
+                        <span class = "text">Generelt når det gjelder oppgavene, så skal det du gjør og det 
+                        sekvenser av koden gjør kommenteres med #.
+                        </span>
+                        
+                        <span class = "task-header">Oppgave 2.1</span>
+                        <span class = "text">
+                            Ta inn to tall der du sjekker om det andre er større enn det første i en variabel. 
+                            Skriv ut resultatet av sjekken.
+                        </span>
+
+                        <span class = "task-header">Oppgave 2.2</span>
+                        <span class = "text">
+                            Sjekk om 50/3 er større enn 20, og print ut fornuftige resultater.        
+                        </span>
+                        
+                        <span class = "task-header">Oppgave 2.3</span>
+                        <span class = "text">
+                            Prøv deg frem med %-operatoren (modulo). 
+                            10%3, 17%2, 17%3, 17%6. Skriv i koden din hvordan modulo fungerer.
+                        </span>
+                        <span class = "task-header">Oppgave 2.4</span>
+                        <span class = "text">
+                            Lag et program som regner lønnen til en som jobber hos en bilselger. Bilselgeren tjener 500 kr for hver bil han selger. Dersom han 
+                            selger over 70 biler får han en bonus på 5000 kr. Ta deretter inn hvor mange biler han har solgt, og kriv til konsoll.            
+                        </span>
+
+                        <span class = "task-header">Oppgave 2.5</span>
+                        <span class = "text">
+                            Test ut de forskjellige betingelsene <, >, <=, >=, == og != på noen variabler. 
+                        </span>
+                        <span class = "task-header">Oppgave 2.6</span>
+                        <span class = "text">
+                        Lag en enkel nøstet if-setning. Den skal først sjekke og en variabel er større enn et tall, og så sjekke om variabelen modulo 1 (%) blir akkurat 1. 
+                        Dersom det er sant skal det printes «Oddetall!» Dersom det ikke er sant skal det printes «Partall!».
+                        </span>
+                        <span class = "task-header">Større oppgave 1: Grader</span>
+                        <span class = "text">
+                            Lag et program som spør om en score mellom 0 og 100, kan for eksempel være resultatet 
+                            etter en matteprøve. Basert på scoren, gi eleven en karakter. Velg selv hva karakterskalaen
+                            skal være (hvor mye prosent man trenger riktig for å få hver karakter). Gjør slik at dersom
+                            en bruker skriver inn en score, så skal programmet regne ut hvilken karakter han skal få. 
+
+                        </span>
+                        <span class = "task-header">Større oppgave 2: Stein, saks, papir</span>
+                        <span class="text">
+                            Stein, saks, papir. Lag et program som spiller stein, saks, papir. Bruk "import random" til å gjøre
+                            maskinens valg random, og la brukeren selv velge, slik at det blir et funksjonelt spill.
+                            
+                        </span>
+                        <span class = "task-header">Større oppgave 3: Text-adventure</span>
+                        <span class = "text">
+                            Lag et text-adventure game. Jeg har startet på et lite text-adventure game her. Bli inspirert av
+                            koden, fullfør spillet eller lag ditt helt egne spill! Her er det kreativitet som gjelder, så det 
+                            viktig at du bruker god tid på å tenke hva planen er! Hva skal spillet handle om og slikt!               
+                        </span>
+                        <span class = "task-header">Større oppgave 4: Chatbot</span>
+                        <span class = "text">
+                            Inspirert av Chatbot-en som ble vist på Audi i november, så prøv å lag en chatbot som basert på din
+                            input, gir et svar tilbake. Utforsk hvordan du kan få Chatboten til å alltid bruke en spesifikk farge 
+                            i terminalen, også videre.      
+                        </span>
+                    </section>
+                </div>
+            </main>
+        </div>
+    <script src="../index.js"></script>
+    <script src="../styles/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    </body>
+</html>

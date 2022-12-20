@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Python | Funksjoner</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/sidebar.css">
+        <link rel="stylesheet" href="../styles/content.css">
+        <link rel="stylesheet" href="../styles/highlight/styles/github-dark-dimmed.min.css">
+
+
+    </head>
+    <body>
+        <div id="container">
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <span class="menutitle">Navigasjon</span>  
+                <nav class="menu">
+                    <ul>
+                        <li><a href="variablerside.html" class="menu-item">Variabler</a></li>
+                        <li><a href="conditionsside.html" class="menu-item">Conditions</a></li>
+                        <li><a href="funksjoner.html" class="menu-item is-active">Funksjoner</a>
+                            <ul>   
+                                <li><a href="#lagringoggjenbruk" class="menu-item-sub">Don't Repeat Yourself (DRY)</a></li>
+                                <li><a href="#funksjoner" class="menu-item-sub">Funksjon: enkelt forklart</a></li>
+                                <li><a href="#argumenter" class="menu-item-sub">Argumenter og parametre</a></li>
+                                <li><a href="#lokaleglobale" class="menu-item-sub">Lokale og globale variabler</a></li>
+                                <li><a href="#oppsummering" class="menu-item-sub">Oppsummering</a></li>
+                                <li><a href="#oppgaver" class="menu-item-sub">Oppgaver</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="prosjekter.html" class="menu-item">Større oppgaver/prosjekter</a>
+                </nav>
+
+            </aside>
+            <main class="content">
+                <div class="inner">
+                    <header> 
+                        <span class="headertitle">Funksjoner</span>
+                        <span class="headertext">En funksjon er en kodebit som du kan kalle på for å utføre en oppgave. 
+                            Det er som et lite program som du kan bruke i ditt større program. Det er en måte å organisere og strukturere koden din på, 
+                            slik at du ikke trenger å skrive samme kode om og om igjen. 
+                        </span>
+                        <span class="headertext">
+                            Funksjoner tar oftest inn noe data, prosesserer 
+                            dataen, og returner resultatet. Den mest kjente funksjonen er <code>print()</code>, som vi kjenner godt.
+                        </span>
+                    </header>
+                    <section id="lagringoggjenbruk">
+                        <span class="paragraph-header">Don't Repeat Yourself</span>
+                        <span class="text">Et viktig prinsipp i programmering er <b>Don't Repeat Yourself (DRY)</b>. Med det mener man at repetisjon av kode, altså å skrive 
+                            kodelinjer som gjør det samme flere ganger i et program, er uønsket.
+                        </span>
+                        <div class="twopictures">
+                            <img src="../img/dry.png"> 
+                            <img src="../img/dry2.png">
+                        </div>
+                        <span class="text">Se for deg at du skal tegne en sky med turtle. Da må man skrive en kodeblokk på hvertfall 10-15 kodelinjer. Dersom du skal tegne flere skyer, er det fristende å 
+                            bare copy-paste koden du har skrevet. Men hva om man skal tegne mange skyer? Det blir en lang og uoversiktlig kode. Da kan det være lurt å lage en <em>sky-funksjon</em>, som 
+                            lager en sky når man kaller på den.
+                            <br><br>
+                            <b>The rule of 3</b>: Hvis man må copy-paste en kodeblokk tre eller flere ganger, så passer det med en funksjon. 
+                            <br><br>
+                            De to viktigste grunnene til å bruke funksjoner er følgende: 
+                        </span>
+                        <ol class="nummerliste">
+                            <li><b>Readability:</b> Lesbarhet, det å holde koden konsis og lettlest for andre. Ved å unngå gjentakende kodelinjer blir koden mer lesbar og oversiktlig.    
+                            </li>
+                            <li><b>Debugging:</b> Funksjoner gjør det lettere å feilsøke problemet. Med mye gjentakende kode kan det være vanskelig å finne en feil i koden, og når feilen først
+                            er funnet, så må den fikses i hver gjentakende kodeblokk.</li>
+                        </ol>
+                        
+                    </section>
+                    <section id="funksjoner">
+                        <span class="paragraph-header">Funksjon: enkelt forklart</span>
+                        <span class="text">I programmet nedenfor har vi en funksjon. Funksjonen har vi gitt navnet <code>presentering()</code>, og 
+                        brukes til å hilse og presentere navnet "Jens".</span>
+                        <iframe src="https://trinket.io/embed/python3/96013a96ea?start=result" width="100%" height="225" 
+                            frameborder="0" marginwidth="0" marginheight="0" allowfullscreen fontsize: "13"></iframe>
+
+                        <span class="text">
+                            Det første ordet <code>def</code>, står for <em>defined function</em>. Som if/else-setninger, ender def 
+                            med en kolon og en innrykket blokk med kode. Med def blir ikke noe kode kjørt. Def <b>lager</b> en kodeblokk, og deretter <b>lagrer</b> kodeblokken med et valgfritt navn, 
+                            slik at den kan bli gjenbrukt senere. Denne gjenbrukbare kodeblokken med et navn er det vi kaller en <b>funksjon</b>.
+                        </span>
+                        <span class="text">Hver gang vi kaller på 
+                        presentering(), så skrives meldingen "Hei" og "Jeg heter Jens" til terminalen. For å kalle på funksjonen, 
+                        så skriver man bare navnet på funksjonen. Hvis du vil at funksjonen skal kjøre flere ganger, så
+                        er det bare å kalle på funksjonen flere ganger. 
+                        </span>
+                        <span class="text"><span style="color: brown; font-weight: bold;">Oppgave:</span> Lag en funksjon som printer meldingen "Hello World" 4 ganger når den blir kalt på.</span>
+                        
+                        <button id ="solutionbutton" onclick="showSolution()" type="button">Løsning</button>
+                        <div id = "solution">
+                            <span class="text" style="color:white;">Et alternativ til koden nedenfor hadde vært å bruke løkker. Det kommer mer om senere</span>
+
+<pre><code class="language-bash">def hei_verden():
+    print("Hello World")
+    print("Hello World")
+    print("Hello World")
+    print("Hello World")
+hei_verden()
+</code></pre>
+                        </div>
+                    </section>
+                    <section id="argumenter">
+                        <span class="paragraph-header">Argumenter og parametre</span>
+                        <span class="text">
+                        Funksjonen nedenfor 
+                        er lagd for å regne ut summen av to tall. I parentesen har vi satt inn bokstavene a og b. a og b er funksjonens <b>parametre</b>. En parameter er en variabel som kan brukes
+                        i funksjonen. 
+                        </span>
+
+<pre><code class="language-python">def sum(a,b): 
+    """beregner summen av to tall a og b"""
+    return a+b
+
+total = sum(10,20)
+print(total)
+</code></pre>
+                        <span class="text">
+                        En funksjon som er laget på en god måte, vil alltid returnere noe etter at den har blitt kjørt. 
+                        I eksemplet ovenfor vil vi sitte igjen med summen av to tall a og b. For å kunne bruke summen av a og b videre i programmet, så skriver vi <code>return a+b</code> 
+                        i funksjonen. 
+                        <br><br>
+                        Den neste linjen <code>total = sum(10,20)</code> lager en variabel som heter total, og tilordner den verdien av summen som returneres når man kaller på 
+                        funksjonen med tallene 10 og 20. Tallene vi skriver i parentesen når vi kaller på funksjonen er funksjonens <b>argumenter</b>. 
+                        <br><br>
+                        Det er viktig at rekkefølgen på argumentene når man kaller på funksjonen samsvarer med rekkefølgen på parametrene når man lager funksjonen. 
+                        Det første argumentet vi skriver blir lagret som den første parameteren (<code>a=10</code>, <code>b=20</code>).
+                        <br><br>
+                        Summen av tallene, 30, blir returnert av funksjonen,
+                        og lagret i variabelen total, som vi kan bruke videre i programmet. Til slutt blir verdien til total printet ut. 
+                        </span>
+
+                        
+                    </section>    
+                    <section id="lokaleglobale">
+                        <span class="paragraph-header">Lokale og globale variabler</span>
+                        <span class="text">
+                            Når man jobber med funksjoner, finnes det to typer variabler. Lokale variabler blir deklarert 
+                            inni funksjonen, og kan bare brukes i funksjonen. Eksempel:
+                        </span>
+<pre><code class="language-python">def hils(navn):
+    hilsen = f"Hei {navn}"
+    print(hilsen)
+
+hils("Jens") # printer "Hei Jens"
+print(hilsen) # gir error, siden hilsen er en lokal variabel
+</code></pre>
+                        <span class="text">
+                            Globale variabler derimot blir deklarert utenfor funksjonen, og kan brukes hvor som helst i programmet. Eksempel:
+                        </span>
+<pre><code class="language-python">hilsen = "Hello World"
+def hils(navn):
+    print(f"{hilsen} {navn}")
+
+hils("Jens") # printer "Hello World Jens"
+print(hilsen) # printer "Hello World"
+</code></pre>
+                    <span class="text">
+                        Det er generelt en god ide å ikke bruke globale variabler, siden de kan gjøre det vanskeligere å 
+                        forstå og ivareta koden. Lokale variabler er bedre, siden de har et mer begrenset omfang, og unngår 
+                        konflikter med andre variabler i koden.  
+                    </span>
+                    </section>
+                    <section id="oppsummering">
+                        <span class="paragraph-header">Oppsummering</span>
+                        <img class="newfoto" src="../img/pythonfunc.jpeg">
+                        <span class="text">Vi bruker def til å si til Python at vi 
+                            skal lage en funksjon. Deretter gir vi funksjonen et navn, fulgt opp av en parentes. I parentesen 
+                            setter vi inn eventuelle parametre, som kan brukes som variabler inni funksjonen. 
+                            <br><br>
+                            All kode som er en del av funksjonen er innrykket. Funksjonen returnerer en verdi (i dette tilfellet a+b).
+                            For å kjøre funksjonen kaller man på funksjonsnavnet med argumentene som du vil bruke. 
+                            <br><br>
+                            Lokale variabler defineres i funksjonen, mens globale variabler defineres utenfor funksjonen. 
+                        </span>
+                        
+                        </section>   
+                    <section>
+                        <span class="paragraph-header">Viktige innebygde Python-funksjoner</span>
+                        <span class="text">Her har jeg samlet en del viktige Python-funksjoner som kan være nyttige å kunne:</span>
+<pre><code class="language-python">>>>a = "Hello world"
+len(a) # gir lengden av strengen: 5
+a.upper() #gjør bokstavene til strengen store: HELLOWORLD
+a.lower() #motsatt av kodelinjen over: helloworld
+a.strip() #fjerner mellomrom i strengen: Helloworld
+a.replace("o", "a") #bytter o med a i strengen: Hella warld
+abs(-10/5) #gir absoluttverdien: 2
+round(-4/3) #runder av svaret: -1
+min(3,2,5) #gir minste tallet fra argumentene: 2
+max(3,2,5) #gir høyeste tallet fra argumentene: 5
+b = True 
+type(b) #gir datatypen: bool 
+</code></pre>
+                    </section>
+                    <section id="oppgaver"> 
+                        <span class="paragraph-header">Oppgaver</span>
+                        <span class = "text">Generelt når det gjelder oppgavene, så skal det du gjør og det 
+                        sekvenser av koden gjør kommenteres med #.
+                        </span>
+                        
+                        <span class = "task-header">Oppgave 2.1</span>
+                        <span class = "text">
+                            Skriv en funksjon som tar et enkelt heltallparameter og skriver ut 'positiv' 
+                            hvis tallet er større enn 0, og 'negativ' hvis tallet er mindre enn 0.
+                        </span>
+
+                        <span class = "task-header">Oppgave 2.2</span>
+                        <span class = "text">
+                            Skriv en funksjon som tar to heltallparametre og skriver ut 'equal' hvis de to tallene er 
+                            like, 'greater' hvis det første tallet er større enn det andre, og 'smaller' hvis det første tallet er mindre enn det andre.
+                        </span>
+                        <span class = "task-header">Oppgave 2.3</span>
+                        <span class = "text">
+                            Skriv en funksjon som tar to heltallsparametre og enten returnerer summen, subtraksjonen og multiplikasjonen avhengig av bruker-input.
+                        </span>
+                        <span class = "task-header">Oppgave 2.4</span>
+                        <span class = "text">
+                            Skriv en funksjon som tar tre heltallparametre og 
+                            skriver ut summen av de tre tallene, etterfulgt av gjennomsnittet av de tre tallene.
+                        </span>
+                        <span class = "task-header">Oppgave 2.5</span>
+                        <span class = "text">
+                            Skriv en funksjon som tar inn et heltall som argument, og skriver en melding dersom 1) alderen er under 18, 2) alderen er mellom 18
+                            og 21, og 3) alderen er over 21. 
+                        </span>
+                        <span class = "task-header">Oppgave 2.6</span>
+                        <span class = "text">
+                            Omskriv funksjonen fra tidligere slik at den definerer en funksjon "computergrade()" som tar inn en score som en parameter, og returnerer
+                            karakteren til eleven som en streng.
+                        </span>
+                        <span class = "task-header">Oppgave 2.7</span>
+                        <span class = "text">
+                            Skriv en Python-funksjon som tar et tall som parameter og sjekker om tallet er primtall eller ikke.
+                        </span>
+
+                    </section>
+                </div>
+            </main>
+        </div>
+    <script src="../index.js"></script>
+    <script src="../styles/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    </body>
+</html>
