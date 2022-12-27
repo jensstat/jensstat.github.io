@@ -14,7 +14,10 @@ body {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;    
 }
 
+
+
 #titlecontainer {
+    margin-top: 200px;
     width:80vw;
     height: 100vh;
     display: flex;
@@ -25,8 +28,7 @@ body {
 }
 
 .titleheader {
-    margin-top: 50px;
-    height: 16vw;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +39,8 @@ body {
     background: -webkit-linear-gradient(60deg, red, pink, rgb(0, 255, 30));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+
     
 }
 
@@ -51,18 +55,17 @@ body {
 .text {
     color: white;
     display: block;
+    text-align: center;
     margin-top: 1em;
     font-size: 18px; 
     font-style: normal; 
     font-variant: normal;
     line-height: 1.6em;
-    text-align: left;
 }
 
 .nav-menu {
     text-align:center;
     margin-top: 2em;
-
 }
 
 .btn{
@@ -82,5 +85,38 @@ body {
     padding:20px 20px;
     color:#1b1b1b;
   }
+
+  @media (max-width: 1200px) {
+    #titlecontainer {
+        width: 90vw;
+        margin-top: 100px;
+    }
+    .indexcontainer{
+        width: 90vw;
+    }
+    .titleheadertext{
+        font-size: 50px;
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 870px) {
+    #titlecontainer {
+        width: 90vw;
+        margin-top: 40px;
+    }
+    
+    .indexcontainer{
+        width: 90vw;
+    }
+    .titleheadertext{
+        font-size: 50px;
+        text-align: center;
+    }
+    .btn {
+        padding: 0px 20px;
+    }
+
+}
 
   
