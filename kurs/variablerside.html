@@ -58,10 +58,8 @@
                 <span class = "text">Faste verdier som tall, bokstaver og strenger kalles "konstanter", fordi verdiene deres ikke endres. I bildet nedenfor
                         brukes <code>print()</code> til å skrive et tall og en streng til konsollen.
                 </span>
-<pre><code class="language-Bash">>>> print(123)
-123
->>> print("Hello World")
-Hello World</code></pre>
+<pre><code class="language-Python">>>> print(123) #gir output 123
+print("Hello World") #gir output Hello World</code></pre>
                 <span class="text">En <em>variabel</em>  er data og verdier som <b>kan endres og brukes senere</b> gjennom programmet.
                 Når vi lager en variabel, sier vi at vi <em>deklarerer</em> variabelen. Deretter <em>tilordner</em> vi variabelen en verdi ved å bruke likhetstegnet = etterfult 
                 av verdien. I eksemplet nedenfor lager vi en variabel med navnet <code>tall1</code> med verdien 20. Navnet til variabelen, 
@@ -86,12 +84,9 @@ tall, setning = 2, "Hello World"  #variabel tall = 2 og setning = "Hello World"
                 </span>
                 <img class = "operatorer" src="../img/operatorer.png">
                 <span class="text">
-                Prøv deg frem i det interaktive Python-vinduet nedenfor. Lag en kalkulator som gjør alle de vanlige matematiske
-                operasjonene ovenfor, og skriver det ut til konsollen. Rest-operatoren % er den vanskeligste å forstå seg på, og krever
+                Lag en kalkulator som gjør alle de vanlige matematiske operasjonene ovenfor, og skriver det ut til konsollen. Rest-operatoren % er den vanskeligste å forstå seg på, og krever
                 muligens at man googler litt.
                 </span>
-                <iframe src="https://trinket.io/embed/python3/8dfcef9a13" width="100%" height="400" 
-                frameborder="" marginwidth="0" marginheight="0" allowfullscreen ></iframe>
                 
             </section>
             <section id="typerdata">
@@ -113,27 +108,23 @@ tall, setning = 2, "Hello World"  #variabel tall = 2 og setning = "Hello World"
                     summen. Når to strenger plusser sammen, så legges de sammen i en streng. Dette fungerer
                     så lenge det er to verdier av <i>samme type</i> som legges sammen. 
                 </span>
-                <pre><code class="language-bash">>>> print(3+5)
-8
->>> print("Hello "+"world")
-Hello world</code></pre>
+                <pre><code class="language-bash">print(3+5) #gir output 8
+print("Hello "+"world") #gir output Hello World
+</code></pre>
                 
                 <span class="text">
                     Noen ganger har man behov for å konvertere mellom datatypene. Hvis du har lyst til at et int skal bli et float, eller vil gjøre en streng som inneholder
                     tall til et int, så kan du det. Det siste er spesielt viktig hvis du har lyst til å gjøre matematiske operasjoner på tallene dine.
                 </span>
-                <pre><code class="language-bash">>>> tall = 23
->>> tall = float(23)
->>> print(tall)
-23.0 #blitt desimaltall
+                <pre><code class="language-bash">tall = 23
+tall = float(23)
+print(tall) #gir output 23.0 (blitt desimaltall)
 
->>> tallstreng = "3"
->>> print(3*tallstreng)
-333 #gir oss en streng med 3 3-ere samlet. 
+tallstreng = "3"
+print(3*tallstreng) #gir output 333
 
->>> tallint = int(tallstreng)
->>> print(3*tallint)
-27 #multipliserer</code></pre>
+tallint = int(tallstreng)
+print(3*tallint) #gir output 27</code></pre>
                 <span class="text"><span style="color: brown; font-weight: bold;">Oppgave:</span> Prøv å legg sammen data av type streng
                     sammen med data av typen tall i Python: Hva skjer? Hvorfor tror du det er slikt?</span>
                     </span>
